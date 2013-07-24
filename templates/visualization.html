@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <style>
+            .main {
+                float:right;
+                width:480px;
+                padding:10px;
+                margin-right: 200px;
+                background:#9c9;
+            }
+            .sidebar  {
+                float:left;
+                width:230px;
+                padding:10px;
+                margin-left: 200px;
+                background:#99c;
+            }
+        </style>
+    </head>
+    <body>
+        <title>Emails in the system</title>
+        <h1>Emails:</h1>
+        <div class="sidebar">
+            <ul>
+            {% for email in emails %}
+            <li id="{{email}}"><a href="#">{{email}}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div id="result" class="main"></div>
+        <script>
+            $("li").click(function () {
+                $.get('/email/' + $(this).attr('id'), function(data) {
+                    $('#result').html(data);
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<table>
+    <tr><td>From:</td><td>{{email.From}}</td>
+    <tr><td>To:</td><td>{{email.To}}</td>
+    <tr><td>Subject:</td><td>{{email.Subject}}</td>
+</table>
+
+<fieldset>
+{% autoescape on %}
+{{email.Content}}
+{% endautoescape %}
+</fieldset>
