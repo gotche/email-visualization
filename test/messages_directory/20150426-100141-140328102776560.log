@@ -1,0 +1,24 @@
+Content-Type: multipart/alternative;
+ boundary="===============4282229857728411822=="
+MIME-Version: 1.0
+Subject: Email 1
+From: from@example.com
+To: to@example.com
+Date: Sun, 26 Apr 2015 10:01:41 -0000
+Message-ID: <20150426100141.7335.92994@office>
+
+--===============4282229857728411822==
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Message 1
+--===============4282229857728411822==
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<b>hello</b>
+--===============4282229857728411822==--
+
+-------------------------------------------------------------------------------
